@@ -3,9 +3,15 @@ import Menu from './components/Menu/Menu';
 import SideBar from './components/SideBar/SideBar';
 import Button from './CustomeComponents/Button';
 import Table from './components/Table/Table';
+import { customizeTheme } from './utils/customizeTheme';
+import { ThemeProvider } from '@mui/material/styles';
+import { darkTheme,lightTheme } from './themes';
 
-function App() {
+function App({theme}) {
+  let themeDetails = null;
+  themeDetails = theme === "dark" ? customizeTheme(darkTheme) : customizeTheme(lightTheme);
   return (
+  <ThemeProvider theme={themeDetails} >
     <div className="App">
        <Menu />
        <div className="content-section">
@@ -13,11 +19,12 @@ function App() {
            <SideBar />
          </div>
          <div className='right-section'>
-           <Button> Sample Button </Button>
+           <Button theme={themeDetails} > Sample Button </Button>
            <Table />
          </div>
        </div>
     </div>
+  </ThemeProvider>
   );
 }
 

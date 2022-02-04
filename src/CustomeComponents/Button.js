@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 
+
 const Button = styled.a`
     display: inline-block;
     border-radius: 4px;
@@ -9,7 +10,7 @@ const Button = styled.a`
     background: transparent;
     color: white;
     border: 2px solid white;
-    background: #1976d2;;
+    background: ${props => props.theme.palette.primary.main};
     text-align:center;
     margin-bottom:20px;
     margin-left: 0;

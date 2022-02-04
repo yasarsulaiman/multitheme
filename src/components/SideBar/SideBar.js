@@ -8,10 +8,14 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import InboxIcon from '@mui/icons-material/MoveToInbox';
 import MailIcon from '@mui/icons-material/Mail';
+import { useTheme } from '@mui/material/styles';
 
 const SideBar = () => {
+   
+   const theme = useTheme();
+
    return (
-     <div className="sideBarWrapper" >
+     <div className="sideBarWrapper" style={{"backgroundColor":theme.palette.primary.main}} >
           <Box
             role="presentation"
           >
