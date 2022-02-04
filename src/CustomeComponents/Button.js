@@ -8,7 +8,7 @@ const Button = styled.a`
     margin: 0.5rem 1rem;
     width: 11rem;
     background: transparent;
-    color: white;
+    color: ${props => props.theme.palette.common.color};
     border: 2px solid white;
     background: ${props => props.theme.palette.primary.main};
     text-align:center;

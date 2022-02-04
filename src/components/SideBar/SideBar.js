@@ -15,7 +15,7 @@ const SideBar = () => {
    const theme = useTheme();
 
    return (
-     <div className="sideBarWrapper" style={{"backgroundColor":theme.palette.primary.main}} >
+     <div className="sideBarWrapper" style={{"backgroundColor":theme.palette.primary.main, "color": theme.palette.common.color }} >
           <Box
             role="presentation"
           >

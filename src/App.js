@@ -8,8 +8,10 @@ import { ThemeProvider } from '@mui/material/styles';
 import { darkTheme,lightTheme } from './themes';
 
 function App({theme}) {
+  console.log({darkTheme, lightTheme});
   let themeDetails = null;
   themeDetails = theme === "dark" ? customizeTheme(darkTheme) : customizeTheme(lightTheme);
+  console.log({themeDetails});
   return (
   <ThemeProvider theme={themeDetails} >
     <div className="App">
