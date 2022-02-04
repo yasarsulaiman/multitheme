@@ -5,12 +5,11 @@ import Button from './CustomeComponents/Button';
 import Table from './components/Table/Table';
 import { customizeTheme } from './utils/customizeTheme';
 import { ThemeProvider } from '@mui/material/styles';
-import { darkTheme,lightTheme } from './themes';
+import { theme as customeTheme } from './themes';
 
 function App({theme}) {
-  console.log({darkTheme, lightTheme});
   let themeDetails = null;
-  themeDetails = theme === "dark" ? customizeTheme(darkTheme) : customizeTheme(lightTheme);
+  themeDetails = theme === "dark" ? customizeTheme(customeTheme.darkTheme) : customizeTheme(customeTheme.lightTheme);
   console.log({themeDetails});
   return (
   <ThemeProvider theme={themeDetails} >
